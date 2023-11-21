@@ -66,7 +66,7 @@ export class DatabotService {
   }
 
   public login(loginData){
-    return this.http.post(this.apiendpoint +'user/login',loginData);
+    return this.http.post(this.apiendpoint +'/user/login',loginData);
   }
 
   loadHrdashboard1() {
@@ -171,6 +171,16 @@ export class DatabotService {
       headers: httpHeaders
     };
     return this.http.post(this.apiendpoint + '/user/registeruser', JSON.stringify(userdata), options);
+  }
+
+  superUserRegistration(userdata) {
+    let httpHeaders = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+    let options = {
+      headers: httpHeaders
+    };
+    return this.http.post(this.apiendpoint + '/user/registeradmin', JSON.stringify(userdata), options);
   }
 
   userLogin(loginData) {

@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   // apiEndPoint: "https://api.databotics.io/",
-  apiEndPoint: "http://192.168.128.48:4006/",
+  apiEndPoint: "http://192.168.128.25:4006",
   // newEndPoint: "http://139.59.33.108:1337/",
   // covidEndPoint: "http://139.59.33.108:1337/",
   newEndPoint: "https://api.databotics.io/",

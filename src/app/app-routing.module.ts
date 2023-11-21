@@ -66,7 +66,7 @@ import { HealthCovidComponent } from './helth-care-covid/health-covid/health-cov
 import { AuthGuard } from './core/guards/auth.guard';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: '', redirectTo: '/login', pathMatch: 'full' ,canActivate: [AuthGuard]},
+  { path: '', redirectTo: 'login', pathMatch: 'full' ,canActivate: [AuthGuard]},
   { path: 'industries', component: IndustriesComponent,canActivate: [AuthGuard]},
   { path: 'industries/:id', component: IndustriesComponent, runGuardsAndResolvers: 'always'},
   { path: 'health', component: HealthComponent },

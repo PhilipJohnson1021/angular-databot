@@ -18,6 +18,7 @@ export interface UserRegister {
 	userName: String;
 	firstName: String;
 	lastName: String;
+	role: string;
 	emailId: String;
 	phone: String;
 	alternateEmail: String;
@@ -25,3 +26,12 @@ export interface UserRegister {
 	designation: String;
 	location: String;
 };
+
+export interface SuperUserRegister {
+	role: String;
+	userName: String;
+	emailId: String;
+	password: String;
+	contactNumber: string;
+  };
+  

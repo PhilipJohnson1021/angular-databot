@@ -16,47 +16,53 @@
           <div class="card">
             <div class="card-header">
               <h4 style="color:#fff;">Sign UP</h4>
-             
             </div>
             <div class="card-body">
-              <form>
+              <form [formGroup]="userForm" (ngSubmit)="onSubmit()" novalidate>
                 <div class="form-group col-md-12">
-                <label class="col-md-5 p-0 clr">Organization Name</label>
-                <div class="col-md-7">
-                  <input type="text" class="form-control" name="user1">
-                  </div>
-                </div>
-                <div class="form-group col-md-12">
-                  <label class="col-md-5 p-0 clr">Organization Category</label>
+                  <label class="col-md-5 p-0 clr">Organization Name</label>
                   <div class="col-md-7">
-                  <input type="password" class="form-control" name ="password1">
+                    <input type="text" class="form-control">
                   </div>
                 </div>
                 <div class="form-group col-md-12">
                   <label class="col-md-5 p-0 clr">Admin Name</label>
                   <div class="col-md-7">
-                    <input type="text" class="form-control" name="adminname">
-                    </div>
+                    <input type="text" class="form-control" formControlName="adminname">
                   </div>
-                  <div class="form-group col-md-12">
-                    <label class="col-md-5 p-0 clr">Admin Role</label>
-                    <div class="col-md-7">
-                      <input type="text" class="form-control" name="adminrole">
-                      </div>
-                    </div>
-                    <div class="form-group col-md-12">
-                      <label class="col-md-5 p-0 clr">Official Email ID</label>
-                      <div class="col-md-7">
-                        <input type="text" class="form-control" name="OfficialEmailID">
-                        </div>
-                      </div>
-                      <div class="form-group col-md-12">
-                        <label class="col-md-5 p-0 clr">Contact No</label>
-                        <div class="col-md-7">
-                          <input type="text" class="form-control" name="Contact No">
-                          </div>
-                        </div>
-                        
+                </div>
+                <div class="form-group col-md-12">
+                  <label class="col-md-5 p-0 clr">Admin Role</label>
+                  <div class="col-md-7">
+                    <input type="text" class="form-control" formControlName="adminrole">
+                  </div>
+                </div>
+                    
+                <div class="form-group col-md-12">
+                  <label class="col-md-5 p-0 clr">Password</label>
+                  <div class="col-md-7">
+                    <input type="password" class="form-control" formControlName="password">
+                  </div>
+                </div>
+                <div class="form-group col-md-12">
+                  <label class="col-md-5 p-0 clr">Official Email ID</label>
+                  <div class="col-md-7">
+                    <input type="text" class="form-control" formControlName="OfficialEmailID">
+                  </div>
+                </div>
+                <div class="form-group col-md-12">
+                  <label class="col-md-5 p-0 clr">Contact No</label>
+                  <div class="col-md-7">
+                    <input type="text" class="form-control" formControlName="ContactNo">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-12" style="text-align: center">
+                    <!-- <button type="button" class="btn btn-primary btn-block">Button 1</button> -->
+                    <button type="submit" class="btn btn-primary"
+                      style="width: 15%; height: 49px;background-color: #00ff00; color: black;  border: none">Submit</button>
+                  </div>
+                </div>
               </form>
             </div>
            

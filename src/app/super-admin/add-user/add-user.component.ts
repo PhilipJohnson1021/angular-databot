@@ -22,6 +22,7 @@ export class AddUserComponent implements OnInit {
       emailId:['',Validators.compose([Validators.required, Validators.pattern(/^[a-z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)*$/i)])],
       alternateEmailId:['',Validators.compose([Validators.required])],
       userName:['',Validators.compose([Validators.required,Validators.minLength(4)])],
+      userRole:['',Validators.compose([Validators.required,Validators.minLength(4)])],
       password:['',Validators.compose([Validators.required,Validators.minLength(8)])],
       designation:['',Validators.compose([Validators.required,Validators.minLength(4)])],
       location:['',Validators.compose([Validators.required,Validators.minLength(4)])],
@@ -33,6 +34,7 @@ export class AddUserComponent implements OnInit {
     // console.log(this.userForm.value);
     this.userRegister.organizationId = "8189f71d-ed34-40c1-bb03-b1a14f285c41";
     this.userRegister.userName = this.userForm.value.userName;
+    this.userRegister.role = this.userForm.value.userRole;
     this.userRegister.firstName = this.userForm.value.firstName;
     this.userRegister.lastName = this.userForm.value.lastName;
     this.userRegister.emailId = this.userForm.value.emailId;
